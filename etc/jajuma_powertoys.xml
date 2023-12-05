@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<powertoys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Jajuma_PowerToys:etc/jajuma_powertoys.xsd">
+    <dashboard id="pot_customers" class="Jajuma\PotCustomers\Block\Customers">
+        <label translate="true">Customers</label>
+        <arguments>
+            <argument name="enable">true</argument>
+            <argument name="template">Jajuma_PotCustomers::customers.phtml</argument>
+            <argument name="lazyload">true</argument>
+            <argument name="sort_order">70</argument>
+        </arguments>
+    </dashboard>
+</powertoys>
