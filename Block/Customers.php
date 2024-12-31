@@ -103,17 +103,17 @@ class Customers extends Dashboard
     }
 
     /**
-     * Get pending customers
+     * Get confirmed customers
      *
      * @return mixed
      */
-    public function getPendingCustomers()
+    public function getConfirmedCustomers()
     {
         $isCustomerConfirmationRequired = $this->helperConfig->isCustomerConfirmationRequired();
         if ($isCustomerConfirmationRequired) {
-            $pendingCollection = $this->customerFactory->create()
+            $confirmedCollection = $this->customerFactory->create()
                 ->getCollection()->addFieldToFilter('confirmation', ['null' => true]);
-            return $pendingCollection->getSize();
+            return $confirmedCollection->getSize();
         }
         return 0;
     }

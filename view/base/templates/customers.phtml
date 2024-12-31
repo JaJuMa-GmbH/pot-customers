@@ -9,7 +9,7 @@ use Jajuma\PotCustomers\Block\Customers;
 $lastXHours = $block->getLastXHours();
 $numberNewCustomers = number_format($block->getNumberNewCustomers(), 0, '', '.');
 $totalCustomers = number_format($block->getTotalCustomers(), 0, '', '.');
-$pendingCustomers = number_format($block->getPendingCustomers(), 0, '', '.');
+$confirmedCustomers = number_format($block->getConfirmedCustomers(), 0, '', '.');
 $customersOnline = number_format($block->getCustomersOnline(), 0, '', '.');
 $guestsOnline = number_format($block->getGuestsOnline(), 0, '', '.');
 ?>
@@ -25,9 +25,9 @@ $guestsOnline = number_format($block->getGuestsOnline(), 0, '', '.');
             <label><?= 'Total' ?></label>
             <span><?= $totalCustomers ?></span>
         </div>
-        <div class="pot-customers-pending">
-            <label><?= 'Pending' ?></label>
-            <span><?= $pendingCustomers ?></span>
+        <div class="pot-customers-confirmed">
+            <label><?= 'Confirmed' ?></label>
+            <span><?= $confirmedCustomers ?></span>
         </div>
         <div class="pot-customers-online">
             <label><?= 'Online' ?></label>
@@ -118,7 +118,7 @@ $guestsOnline = number_format($block->getGuestsOnline(), 0, '', '.');
         padding-top: 3px;
     }
 
-    .jajuma-pot-customers .pot-customers-pending {
+    .jajuma-pot-customers .pot-customers-confirmed {
         font-size: 14px;
         padding-bottom: 3px;
         border-bottom: 1px solid white;
